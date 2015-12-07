@@ -1,0 +1,18 @@
+.model-row {
+  .image-container {
+    width: auto;
+    .image-heading {
+      width: 100%;
+      background-color: $lightgreen;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 2em;
+      text-align: center;
+      h1 {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
