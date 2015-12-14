@@ -125,7 +125,7 @@ module.exports = function(grunt) {
 
     includes: {
       files: {
-        src: ['<%= config.src %>/index.html','<%= config.src %>/lineup.html'], // Source files
+        src: ['<%= config.src %>/index.html', '<%= config.src %>/lineup.html', '<%= config.src %>/dealer.html'], // Source files
         dest: '<%= config.build %>', // Destination directory
         flatten: true,
         cwd: '.',

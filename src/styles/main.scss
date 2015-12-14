@@ -15,7 +15,7 @@ body {
   height: 55vh;
 }
 .content {
-  padding: 2em;
+  padding: 6em;
 }
 .row {
   display: flex;
@@ -25,7 +25,24 @@ body {
 }
 .feature-row {
   div {
-    max-width: 20%;
+    width: 20%;
     text-align: center;
+  }
+}
+.index-about {
+  text-align: center;
+  margin-top: 70px;
+  h1 {
+    font-size: 30pt;
+  }
+}
+.map-canvas {
+  width: 100%;
+}
+@media screen and (max-width: 980px) {
+  .feature-row {
+    div {
+      width: 100%;
+    }
   }
 }
