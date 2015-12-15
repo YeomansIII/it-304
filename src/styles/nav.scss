@@ -9,16 +9,13 @@
     margin: 0;
     padding: 0;
   }
-
   li {
     display: inline-block;
     float: left;
   }
-
   .brand-logo {
     height: 50px;
   }
-
   li a {
     display: block;
     min-width: 140px;
@@ -29,18 +26,15 @@
     background: $gray3;
     text-decoration: none;
   }
-
   li:hover a {
     background: $lightgreen;
   }
-
   li:hover ul a {
     background: $white;
     color: $gray3;
     height: 40px;
     line-height: 40px;
   }
-
   li:hover ul a:hover {
     background: $lightgreen;
     color: $white;
@@ -48,20 +42,52 @@
   li ul {
     display: none;
   }
-
   li ul li {
     display: block;
     float: none;
   }
-
   li ul li a {
     width: auto;
     min-width: 100px;
     padding: 0 20px;
   }
-
   ul li a:hover + .hidden,
   .hidden:hover {
     display: block;
+  }
+}
+.nav-mobile {
+  display: none;
+}
+@media only screen and (max-width: 860px) {
+  .nav-desktop {
+    display: none;
+  }
+  .nav-mobile {
+    display: block;
+    .navbar-mobile {
+      height: 50px;
+      a {
+        display: inline-block;
+        height: 50px;
+      }
+      .hamburger {
+        width: 1em;
+        display: inline;
+        float: right;
+        font-size: 2.7em;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+    ul {
+      display: inline-block;
+      width: 100%;
+      li {
+        display: block;
+        float: none;
+        width: 100%;
+      }
+    }
   }
 }

@@ -1,6 +1,11 @@
 .model-row {
   .image-container {
-    width: auto;
+    width: 45%;
+    margin-bottom: 40px;
+    img {
+      width: 100%;
+      height: auto;
+    }
     .image-heading {
       width: 100%;
       background-color: $lightgreen;
@@ -12,6 +17,20 @@
       h1 {
         margin: 0;
         padding: 0;
+        font-size: 2em;
+      }
+    }
+  }
+}
+@media screen and (max-width: 880px) {
+  .model-row {
+    .image-container {
+      width: 100%;
+      .image-heading {
+        padding: 5vw;
+        h1 {
+          font-size: 5vw;
+        }
       }
     }
   }

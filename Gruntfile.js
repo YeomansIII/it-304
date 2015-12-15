@@ -31,7 +31,7 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: ['<%= config.src %>/scripts/{,*/}*.js'],
-        tasks: ['jshint:all'],
+        tasks: ['jshint:all', 'uglify'],
         options: {
           livereload: '<%= connect.options.livereload %>'
         }
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
         tasks: ['includes']
       },
       imagemin: {
-        files: ['<%= config.src %>/images/{,*/}*.{png,jpg,jpeg}'],
+        files: ['<%= config.src %>/images/{,*/}*.{png,jpg,jpeg,ico}'],
         tasks: ['imagemin']
       },
       gruntfile: {
@@ -125,7 +125,7 @@ module.exports = function(grunt) {
 
     includes: {
       files: {
-        src: ['<%= config.src %>/index.html', '<%= config.src %>/lineup.html', '<%= config.src %>/dealer.html'], // Source files
+        src: '<%= config.src %>/{,*/}*.html', // Source files
         dest: '<%= config.build %>', // Destination directory
         flatten: true,
         cwd: '.',
@@ -164,7 +164,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           '<%= config.build %>/scripts/scripts.js': [
-            '<%= config.build %>/scripts/scripts.js'
+            '<%= config.src %>/scripts/main.js'
           ]
         }
       }
@@ -178,7 +178,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= config.src %>/images',
-          src: '{,*/}*.{png,jpg,jpeg,gif}',
+          src: '{,*/}*.{png,jpg,jpeg,gif,ico}',
           dest: '<%= config.build %>/images'
         }]
       }

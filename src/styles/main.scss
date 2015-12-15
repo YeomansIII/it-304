@@ -2,6 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,700,900,300);
 @import 'nav';
 @import 'lineup';
+@import 'model';
+@import 'footer';
 body {
   margin: 0;
   padding: 0;
@@ -32,6 +34,8 @@ body {
 .index-about {
   text-align: center;
   margin-top: 70px;
+  width: 60%;
+  margin: auto;
   h1 {
     font-size: 30pt;
   }
@@ -39,10 +43,22 @@ body {
 .map-canvas {
   width: 100%;
 }
+.contact-text {
+  width: 40%;
+}
 @media screen and (max-width: 980px) {
+  .content {
+    padding: 10px;
+  }
   .feature-row {
     div {
       width: 100%;
     }
+  }
+  .index-about {
+    width: 100%;
+  }
+  .contact-text {
+    width: 100%;
   }
 }
