@@ -45,7 +45,7 @@ module.exports = function(grunt) {
         tasks: ['includes']
       },
       imagemin: {
-        files: ['<%= config.src %>/images/{,*/}*.{png,jpg,jpeg,ico}'],
+        files: ['<%= config.src %>/images/{,*/}*.{png,jpg,jpeg,ico,svg}'],
         tasks: ['imagemin']
       },
       gruntfile: {
@@ -178,7 +178,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= config.src %>/images',
-          src: '{,*/}*.{png,jpg,jpeg,gif,ico}',
+          src: '{,*/}*.{png,jpg,jpeg,gif,ico,svg}',
           dest: '<%= config.build %>/images'
         }]
       }
