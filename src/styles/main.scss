@@ -18,6 +18,11 @@ body {
 }
 .content {
   padding: 6em;
+  margin: auto;
+  max-width: 700px;
+  p {
+    text-align: justify;
+  }
 }
 .row {
   display: flex;
